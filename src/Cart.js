@@ -11,7 +11,7 @@ useEffect(() => {
 
 let totalPrice = 0;
   cart.map(item => {
-    totalPrice += item.quantity * item.price; 
+    return totalPrice += item.quantity * item.price; 
   }) 
 
   return (<>
@@ -42,6 +42,7 @@ let totalPrice = 0;
                     src={item.image}
                     width='100%'
                     height='50px'
+                    alt=''
                   /></div>
                 </TableImage>
                 <TableData>{item.name}</TableData>

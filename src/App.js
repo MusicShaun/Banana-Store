@@ -63,11 +63,11 @@ function App() {
 
   let cartQuantity = 0;
     cart.map(item => {
-      cartQuantity += item.quantity; 
+      return cartQuantity += item.quantity; 
     })
   let totalPrice = 0;
     cart.map(item => {
-      totalPrice += item.quantity * item.price; 
+      return totalPrice += item.quantity * item.price; 
     }) 
 
   return (<>

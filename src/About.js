@@ -96,17 +96,6 @@ export default function About() {
     font-size: 1rem;
     margin: 0.5rem 0.5rem 0.5rem 2rem;
   `;
-  const H2Button = styled.h2`
-    margin-top: 4rem;
-    padding: 1rem;
-    width: 300px;
-    background-color: #2b8379;
-    border-radius: 12px;
-    color: white;
-    &:hover {
-      background-color: #19a596;
-    }
-  `;
 
   const Img = styled.img`
     width: 90%;

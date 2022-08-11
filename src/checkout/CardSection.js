@@ -40,12 +40,3 @@ const Details = styled.div`
   padding-bottom: 1rem;
 `;
 
-const style = {
-  margin: '16px auto',
-  padding: '10px 12px',
-  color: '#32325d',
-  backgroundColor: 'white',
-  border: '1px solid transparent',
-  borderRadius: '4px',
-  height: '300px'
-}

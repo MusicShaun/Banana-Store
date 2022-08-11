@@ -8,7 +8,7 @@ const stripePromise = loadStripe("pk_test_51LV67SDloOkZo3DEgLXdZ4KWB8DXOXAiXu734
 
 export default function Checkout(props) {
 
-    const {cart, totalPrice} = props; 
+    const { totalPrice} = props; 
 
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import useFetch from 'react-fetch-hook'; 
+// import useFetch from 'react-fetch-hook'; 
 import styled from 'styled-components';
 import Button from './Button';
 import Quantity from './Quantity';

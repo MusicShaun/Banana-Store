@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {useState} from 'react'; 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function GoToCheckout(props) {
   
