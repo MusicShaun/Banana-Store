@@ -71,6 +71,10 @@ const Form = styled.form`
   align-items: center;
   width: 100%;
   white-space: nowrap;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 const Label = styled.label`
   width: 75%;
@@ -79,6 +83,10 @@ const Label = styled.label`
   align-items: center;
   font-size: 1.3rem;
   font-weight: 600;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
 `;
 const Input = styled.input`
   height: 50px;
@@ -89,6 +97,10 @@ const Input = styled.input`
   font-weight: 600;
   font-size: 1.3rem;
   margin-left: 2rem;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 `;
 const Button = styled.button`
   height:50px;
@@ -106,6 +118,9 @@ const Button = styled.button`
   }
   &:active {
   box-shadow: inset 5px 5px 5px #666;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
   }
 `;
 const styleCheckout = {

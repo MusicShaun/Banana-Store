@@ -40,7 +40,7 @@ export default function Checkout(props) {
 
 const Wrapper = styled.div`
 position: absolute;
-  z-index: 10;
+  z-index: -1;
   height: 90vh;
   width: 100vw;
   display: flex;

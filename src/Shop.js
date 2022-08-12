@@ -22,9 +22,6 @@ export default function Shop(props) {
   )
 }
 const GreyBack = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 0;
   background-color: hsl(56, 70%, 96%);
@@ -33,8 +30,8 @@ const GreyBack = styled.div`
 const Wrapper = styled.div`
   position: relative;
   width: 80vw;
-  top: 132px;
-  margin: auto;
+  top: 2rem;
+  margin: 0 auto 4rem ;
   display: flex;
   flex-wrap: wrap;
 `;
