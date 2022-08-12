@@ -1,9 +1,13 @@
 import styled from 'styled-components'; 
 import GoToCheckout from './GoToCheckout';
 import { useEffect } from 'react'; 
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function Cart(props) {
 const {cart} = props; 
+const mobile = useMediaQuery({ query: '(max-width: 700px)' })
+const desktop = useMediaQuery({ query: '(min-width: 700px)' })
 
 useEffect(() => {
   document.title = `Shopping Cart`;
@@ -22,21 +26,35 @@ let totalPrice = 0;
     {cart.length > 0 &&(
       <Table>
         <TableHead>
+        {desktop && 
           <tr>
             <TableHeader width="5%"></TableHeader>
-            <TableHeader width="25%">
-              Product
-            </TableHeader>
-            <TableHeader width="20%">Unit price</TableHeader>
-            <TableHeader width="10%">Quantity</TableHeader>
-            <TableHeader width="20%">Total</TableHeader>
+              <TableHeader width="25%">
+                Product
+              </TableHeader>
+              <TableHeader width="20%">Unit price</TableHeader>
+              <TableHeader width="10%">Quantity</TableHeader>
+              <TableHeader width="20%">Total</TableHeader>
           </tr>
+        }
+        {mobile && 
+          <tr>
+            <TableHeader width="15%"></TableHeader>
+              <TableHeader width="70%">
+                Product 
+              </TableHeader>
+              <TableHeader width="15%">Total</TableHeader>
+          </tr>
+        }
+
         </TableHead>
         <tbody>
+
           {cart.map((item, index ) => {
             return (
               <TableRow key={index}
                 style={index % 2 !== 0 ? {backgroundColor: '#F5F5F5'} : null}>
+                
                 <TableImage>
                   <div><img 
                     src={item.image}
@@ -45,18 +63,36 @@ let totalPrice = 0;
                     alt=''
                   /></div>
                 </TableImage>
-                <TableData>{item.name}</TableData>
+                {desktop ?
+                <TableData>{item.name}</TableData> 
+                : 
+                <TableData>{`${item.name}: `}{` x${item.quantity} $${item.price}`}</TableData> 
+                 } 
+                 
+                {desktop && 
                 <TableData>{item.price}</TableData>
+                }
+                {desktop &&
                 <TableData>{item.quantity}</TableData>
+                }
                 <TableData>${(parseFloat(item.price)* item.quantity).toFixed(2)}</TableData>
+                
               </TableRow>
             )
           })}
+        
         </tbody>
         <TableFooter>
           <tr>
+            {desktop ?
             <th colSpan="3"></th>
-            <TableHeader>Total</TableHeader>
+            : 
+            <th colSpan='2'></th>
+            }
+            {desktop && 
+              <TableHeader>Total</TableHeader>
+              }
+
             <TableHeader>${totalPrice.toFixed(2)}</TableHeader>
           </tr>
         </TableFooter>
@@ -94,7 +130,7 @@ const H1 = styled.h1`
 `;
 const Wrapper = styled.div`
   position: absolute;
-  top: 15%;
+  top: 130px;
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;

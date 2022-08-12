@@ -10,6 +10,7 @@ export default function Shop(props) {
   }, [])
 
   return (
+    <GreyBack>
     <Wrapper>
       <Products 
         cart={cart}
@@ -17,12 +18,22 @@ export default function Shop(props) {
         onProductTake={onProductTake}
       />
     </Wrapper>
+    </GreyBack>
   )
 }
-
+const GreyBack = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  background-color: hsl(56, 70%, 96%);
+  overflow: hidden;
+`;
 const Wrapper = styled.div`
+  position: relative;
   width: 80vw;
-  margin-top: 2rem;
+  top: 132px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;

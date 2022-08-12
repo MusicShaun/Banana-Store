@@ -10,7 +10,7 @@ export default function Home() {
   }, [])
 
   return (<>   
-  <BananaBackground /> 
+  <BananaBackground>
     <Wrapper>
     
       <Left>
@@ -28,19 +28,15 @@ export default function Home() {
 
   
     </Wrapper>
-
+</BananaBackground>
   </>
 
   )
 }
 const BananaBackground = styled.div`
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
   width: 100%;
+  height: calc(100% - 100px);
   opacity: 0.8;
   object-fit: fill;
   background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');

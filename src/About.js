@@ -8,7 +8,7 @@ export default function About() {
   }, [])
 
   return (<>   
-    <BananaBackground /> 
+    <BananaBackground>
       <Wrapper>
       
         <Left>
@@ -38,18 +38,13 @@ export default function About() {
   
     
       </Wrapper>
-  
+    </BananaBackground>
     </>
   
     )
   }
   const BananaBackground = styled.div`
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
     width: 100%;
     opacity: 0.8;
     object-fit: fill;
@@ -59,7 +54,6 @@ export default function About() {
   `;
   const Wrapper = styled.div`
     width: 86vw; 
-    height: 70vh;
     margin: auto;
     transform: translateY(15%);
     display: flex;

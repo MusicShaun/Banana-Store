@@ -13,7 +13,6 @@ export default function Shop(props) {
 
 return (<>
 
-  <GreyBack></GreyBack>
 
   {data.map((info )=> (
     <ProductContainer 
@@ -50,16 +49,7 @@ return (<>
   }
 </>)
 }
-const GreyBack = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 150vh;
-  width: 100%;
-  z-index: 0;
-  background-color: hsl(56, 70%, 96%);
-  overflow: hidden;
-`;
+
 const ProductContainer = styled.div`
   width: 250px;
   min-width: 250px;
@@ -80,26 +70,24 @@ const ProductDetails = styled.div`
   padding: 1rem;
 `;
 const imageStyling = {
-  width: '284px',
+  width: '100%',
   height: '180px',
-  margin: '1rem',
   objectFit: 'cover',
-  backgroundSize: '284px 180px',
+  backgroundSize: '100% 100%',
+  backgroundRepeat: 'no-repeat',
   zIndex: '-1',
+  overflow: 'hidden'
 }
 const Image1 = styled.div`
   background-image: url('https://specialtyproduce.com/sppics/549.png');
 `;
 const Image2 = styled.div`
-  transform: scale(1.4);
   background-image: url('https://img1.exportersindia.com/product_images/bc-small/dir_155/4625850/kathali-banana-1500569441-3166702.jpeg');
 `;
 const Image3 = styled.div`
-  transform: scale(1.4);
   background-image: url('https://5.imimg.com/data5/QY/RI/MY-31885049/karpooravalli-banana-500x500.jpeg');
 `;
 const Image4 = styled.div`
-  transform: scale(1.1);
   background-image: url('https://4.imimg.com/data4/QV/RG/MY-31246828/banana-grand-naine-500x500.jpg');
 `;
 const Image5 = styled.div`
