@@ -19,7 +19,7 @@ let totalPrice = 0;
   }) 
 
   return (<>
-    <BananaBackground /> 
+    <BananaBackground>
     <Wrapper>
     <H1> Your Cart</H1>
     <Container>
@@ -39,11 +39,8 @@ let totalPrice = 0;
         }
         {mobile && 
           <tr>
-            <TableHeader width="15%"></TableHeader>
-              <TableHeader width="70%">
-                Product 
-              </TableHeader>
-              <TableHeader width="15%">Total</TableHeader>
+              <TableHeader width="75%">Product</TableHeader>
+              <TableHeader width="25%">Total</TableHeader>
           </tr>
         }
 
@@ -54,7 +51,7 @@ let totalPrice = 0;
             return (
               <TableRow key={index}
                 style={index % 2 !== 0 ? {backgroundColor: '#F5F5F5'} : null}>
-                
+                {desktop && 
                 <TableImage>
                   <div><img 
                     src={item.image}
@@ -63,6 +60,7 @@ let totalPrice = 0;
                     alt=''
                   /></div>
                 </TableImage>
+                }
                 {desktop ?
                 <TableData>{item.name}</TableData> 
                 : 
@@ -87,7 +85,7 @@ let totalPrice = 0;
             {desktop ?
             <th colSpan="3"></th>
             : 
-            <th colSpan='2'></th>
+            <th colSpan='1'></th>
             }
             {desktop && 
               <TableHeader>Total</TableHeader>
@@ -104,20 +102,19 @@ let totalPrice = 0;
     />
     </Container> 
     </Wrapper>
-
+    </BananaBackground>
   </>)
 }
 
 const BananaBackground = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 0.8;
-  object-fit: fill;
-  background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
-  background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: fill;
+    background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
+    background-repeat: repeat;
+    z-index: -1;
 `;
 const H1 = styled.h1`
   text-align: center;
@@ -129,10 +126,7 @@ const H1 = styled.h1`
   margin: 0 auto;
 `;
 const Wrapper = styled.div`
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 132px auto;
   width: 90vw;
   min-height: 70vh;
   display: flex;
@@ -146,7 +140,8 @@ const Container = styled.div`
   position: relative;
   width: 90%;
   height: 94%;
-  margin: 1rem 2rem 2rem;
+  margin: auto;
+  margin-bottom: 2rem;
   border-radius: 12px;
   background-color: white;
 `;
