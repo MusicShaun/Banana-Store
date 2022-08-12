@@ -50,9 +50,8 @@ export default function About() {
     width: 100%;
     height: 100%;
     left: 0;
-    top: 100px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   `;
   const BananaBackground = styled.div`
@@ -67,9 +66,10 @@ export default function About() {
     z-index: -1;
   `;
   const Wrapper = styled.div`
+    display: flex;
     width: 86%; 
     height: 70%;
-    margin-top: 2rem;
+    margin-top: 100px;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -101,6 +101,7 @@ export default function About() {
 
     @media screen and (max-width: 1024px) {
       margin: 2rem 0 2rem 0 ;
+      padding: 0;
       border-radius:  20px;
       width: 100%;
     }
@@ -118,6 +119,7 @@ export default function About() {
     font-weight: 600;
     font-size: 3rem;
     border-bottom: 2px solid rgb(249, 222, 86);
+    white-space: nowrap;
   `;
   const P = styled.p`
     font-size: 1rem;
