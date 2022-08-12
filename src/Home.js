@@ -49,9 +49,9 @@ const Container = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
+  top:100px;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 const Wrapper = styled.div`
   width: 66vw; 

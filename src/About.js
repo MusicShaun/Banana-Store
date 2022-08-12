@@ -50,8 +50,8 @@ export default function About() {
     width: 100%;
     height: 100%;
     left: 0;
+    top: 100px;
     display: flex;
-    align-items: center;
     justify-content: center;
   `;
   const BananaBackground = styled.div`
@@ -69,7 +69,6 @@ export default function About() {
     display: flex;
     width: 86%; 
     height: 70%;
-    margin-top: 100px;
     padding: 2rem;
     display: flex;
     justify-content: center;
