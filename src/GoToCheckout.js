@@ -29,7 +29,7 @@ export default function GoToCheckout(props) {
   return (
   <Wrapper>
   {cart.length === 0 &&
-    <h1 style={{margin: 'auto', margin: '0', padding: '10% 0px 0px 0px '}}>0 items in your cart</h1>
+    <h1 style={{margin: 'auto', padding: '10% 0px 0px 0px '}}>0 items in your cart</h1>
   }
 
   { cart.length > 0 && 
