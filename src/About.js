@@ -53,6 +53,7 @@ export default function About() {
     object-fit: fill;
     background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
     background-repeat: repeat;
+    z-index: -1;
   `;
   const Wrapper = styled.div`
     width: 86vw; 
@@ -64,6 +65,14 @@ export default function About() {
     align-items: center;
     border-radius: 20px;
     background: rgb(249, 222, 86);
+    
+    @media screen and (max-width: 1000px) {
+      height: max-content;
+    }
+    @media screen and (max-width: 600px) {
+      transform: translateY(0);
+      margin-top: 2rem;
+    }
   `;
   const Left = styled.div`
     width: 50%;
@@ -75,6 +84,11 @@ export default function About() {
     background-color: white;
     padding: 1rem;
     border-radius:  20px 0 0 20px;
+    @media screen and (max-width: 1024px) {
+      margin: 2rem 0;
+      border-radius:  20px;
+      width: 86%;
+    }
   `;
   const Right = styled.div`
     width: 40%;
@@ -85,6 +99,9 @@ export default function About() {
     background-color: white;
     padding: 1rem;
     border-radius: 0 20px 20px 0;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   `;
   const H1 = styled.h1`
     margin: 0 0 0.5rem;
@@ -96,7 +113,6 @@ export default function About() {
     font-size: 1rem;
     margin: 0.5rem 0.5rem 0.5rem 2rem;
   `;
-
   const Img = styled.img`
     width: 90%;
     height: 50%;

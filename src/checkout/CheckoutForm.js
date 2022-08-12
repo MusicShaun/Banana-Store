@@ -23,7 +23,7 @@ class CheckoutForm extends React.Component {
     }
 
     alert(`Mock payment made via Stripe`)
-    window.location.href='http://localhost:3000/';
+    window.location.href='https://playful-pudding-43fa23.netlify.app/';
   };
 
 

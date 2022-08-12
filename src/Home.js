@@ -54,6 +54,14 @@ const Wrapper = styled.div`
   align-items: center;
   border-radius: 20px;
   background: rgb(249, 222, 86);
+
+  @media screen and (max-width: 1024px) {
+    width: 76vw;
+    height: 72vh;
+    transform: translateY(0);
+    margin-top: 4rem;
+  }
+
 `;
 const Left = styled.div`
   width: 60%;
@@ -63,18 +71,30 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
 `;
 const Right = styled.div`
   width: 40%;
   height: 80%;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 const H1 = styled.h1`
   margin: 0 0 0.5rem;
   font-weight: 600;
   font-size: 3rem;
   box-shadow: 0 3px 15px hsla(0, 0%, 100%, 0.22);
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 const P = styled.p`
   margin: 0.2rem;
@@ -93,6 +113,9 @@ const H2Button = styled.h2`
   &:active {
   background-color: #19a596;
   box-shadow: inset 5px 5px 5px #666;
+  }
+  @media screen and (max-width: 500px) {
+    width: 200px;
   }
 `;
 const removeShit = {

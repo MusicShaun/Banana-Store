@@ -9,29 +9,20 @@ export default function Quantity(props) {
   const quantity = findProduct ? findProduct.quantity : 0;
 
   return (
-    <Wrapper>
+
       <Circle>
        <Count>{quantity}</Count>
       </Circle>
-    </Wrapper>
+
   )
 }
 
 
-const Wrapper = styled.div`
-  position: absolute;
-  width: 250px;
-  height: 520px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-`;
+
 const Circle = styled.div`
-  margin-bottom: 20px; 
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 `;
 const Count = styled.div`
   width: 40px;

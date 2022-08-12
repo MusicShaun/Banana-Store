@@ -1,49 +1,82 @@
 import { NavLink} from 'react-router-dom';
 import styled from 'styled-components'; 
-
+import Menu from './Hamburger';
+import { useState, useEffect } from 'react'; 
+import { useLocation } from 'react-router-dom';
 
 
 export default function Navbar(props) {
-const {cartQuantity} = props;
+  const {cartQuantity} = props;
+  const [open, setOpen] = useState(false)
+  const location = useLocation();
 
+  function handleMenu() {
+    setOpen(prevOpen => !prevOpen)
+  }
+  function resetMenu() {
+    setOpen(prevOpen => false) 
+  }
 
+  const UList = styled.ul`
+  margin-left: auto;
+  margin-right: calc(5% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  overflow: hidden;
+  height: 100px;
 
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    right: 0;
+    background-color: lightgoldenrodyellow;
+    border-radius: 0px 0 20px 20px;
+    transition: 0.6s ease-out;
+    height: ${open === true ? '100vh' : '0vh'};
+    top: ${open ?  '0px' : '-100px'};
+  }
+`;
 
   return (<>
-  <NavBar>  
+  <NavBar style={location.pathname === '/shop' ? {position: 'fixed'} : {position: 'absolute'}}>  
 
-      <Logo>
-      </Logo>
+    <Logo>
+    </Logo>
 
-      <NavLink to='/' >    
+    <NavLink to='/' >    
       <Logo2   src={require('./img/banana-bros-logo-2.png')} />
-      </NavLink>
+    </NavLink>
     
+    <HamburgerDisplay><Menu handleMenu={handleMenu}></Menu></HamburgerDisplay>
 
 
     <UList>
-      <ListItem>
+      <ListItem onClick={resetMenu}>
         <NavLink to='/' 
             style={removeVisited}>
               Home
         </NavLink>
       </ListItem>
 
-      <ListItem>
+      <ListItem onClick={resetMenu}>
         <NavLink to='/about' 
           style={removeVisited}>
             About
         </NavLink>
       </ListItem>
 
-      <ListItem>
+      <ListItem onClick={resetMenu }>
         <NavLink to='/shop' 
           style={removeVisited}>
             Shop
         </NavLink>
       </ListItem>
 
-      <ListItem>
+      <ListItem onClick={resetMenu}>
         <CartItem>
           <NavLink to='cart' 
             style={removeVisited}>
@@ -59,7 +92,7 @@ const {cartQuantity} = props;
 }
 const AdjustBodySizeFromNav = styled.div`
   position: relative;
-  height: 10vh;
+  height: 100px;
   width: 100%;
 `;
 const NavBar = styled.nav`
@@ -83,6 +116,10 @@ const Logo = styled.div`
   background-repeat: no-repeat;
   cursor: pointer;
   flex-shrink: 0;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 const Logo2 = styled.img`
   width: 100px;
@@ -91,16 +128,17 @@ const Logo2 = styled.img`
   margin-left: 0%;
   cursor: pointer;
   padding: 0;
+  @media screen and (max-width: 700px) {
+    margin-left: 5vw;
+  }
 `;
-const UList = styled.ul`
-  margin-left: auto;
-  margin-right: calc(5% - 1rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  overflow: hidden;
+const HamburgerDisplay = styled.div`
+  display: block;
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
 `;
+
 const ListItem = styled.li`
   margin: 0 0.5rem;
   width: 100px;
@@ -116,6 +154,17 @@ const ListItem = styled.li`
   }
   &:active:not(:last-child) {
   box-shadow: inset 3px 3px 3px #666;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 3rem;
+
+    &:active {
+      box-shadow: none;
+  }
+    &:hover {
+      padding: 0rem;  
+    }
   }
 `;
 const CartItem = styled.span`
@@ -136,6 +185,17 @@ const CartItem = styled.span`
   }
   &:active {
   box-shadow: inset 3px 3px 3px #666;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    &:active {
+      box-shadow: none;
+  }
+    &:hover {
+      padding: 0rem;  
+    }
   }
 `;
 const removeVisited = {

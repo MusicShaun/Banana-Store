@@ -1,7 +1,6 @@
 // import useFetch from 'react-fetch-hook'; 
 import styled from 'styled-components';
 import Button from './Button';
-import Quantity from './Quantity';
 import data from './ReplaceBananaServer.js';
 
 export default function Shop(props) {
@@ -10,7 +9,6 @@ export default function Shop(props) {
   // TEST SERVER WORKS 
   // const {isLoading, data = []} = useFetch('http://localhost:3000/bananas/', []);
   
-  // USE THIS FOR SHOWCASING
   
 
 return (<>
@@ -42,20 +40,14 @@ return (<>
           onProductTake={onProductTake}
           info={info}
           cart={cart}
-        ></Button>
-
-        <Quantity
-          cart={cart}
-          info={info}
-        >
-        </Quantity>
+          >
+        </Button>
 
     </ProductContainer>
 
       )
     )
   }
-
 </>)
 }
 const GreyBack = styled.div`
@@ -70,11 +62,13 @@ const GreyBack = styled.div`
 `;
 const ProductContainer = styled.div`
   width: 250px;
-  max-width: 250px;
+  min-width: 250px;
   height: 500px;
   display: flex;
   flex-direction: column;
+  flex: 1 2;
   margin: 1rem;
+  padding: 0rem 1rem;
   border-radius: 20px;
   box-shadow: 8px 15px 5px hsla(0, 0%, 20%, 0.22);
   background-color: white;

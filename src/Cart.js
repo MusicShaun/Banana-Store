@@ -87,7 +87,8 @@ const H1 = styled.h1`
   text-align: center;
   font-weight: 600;
   font-size: 4rem;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
+  padding-top: 1rem;
   color: rgb(64,64,20);
   margin: 0 auto;
 `;
@@ -107,7 +108,7 @@ const Wrapper = styled.div`
 `;
 const Container = styled.div`
   position: relative;
-  width: 94%;
+  width: 90%;
   height: 94%;
   margin: 1rem 2rem 2rem;
   border-radius: 12px;

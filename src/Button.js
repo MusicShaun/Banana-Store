@@ -1,5 +1,5 @@
 import styled from 'styled-components'; 
-
+import Quantity from './Quantity';
 
 export default function Button(props) {
   const {onProductAdd, onProductTake, info, cart} = props; 
@@ -18,6 +18,11 @@ export default function Button(props) {
           style={{ backgroundColor: '#FF6D6A',   borderRadius: '6px 6px 6px 16px'}}
       >-</Buttons>
 
+      <Quantity           
+          cart={cart}
+          info={info}
+      ></Quantity>
+      
       <Buttons 
         onClick={() => onProductAdd(info)}
         disabled={disableAddButton}
@@ -28,13 +33,13 @@ export default function Button(props) {
 }
 
 const Wrapper = styled.div`
-  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  flex: 0.5 2;
   height: 500px;
-  width: 250px;
+  min-width: 250px;
   font-size: 2rem;
   font-weight: 600;
 `;

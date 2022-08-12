@@ -29,7 +29,7 @@ export default function GoToCheckout(props) {
   return (
   <Wrapper>
   {cart.length === 0 &&
-    <h1 style={{textAlign: 'center', margin: '0', paddingTop: '10%'}}>0 items in your cart</h1>
+    <h1 style={{margin: 'auto', margin: '0', padding: '10% 0px 0px 0px '}}>0 items in your cart</h1>
   }
 
   { cart.length > 0 && 
@@ -61,6 +61,8 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgb(249, 222, 86);
+  display: flex;
+  justify-content: center;
 `;
 const Form = styled.form`
   padding-top: 2rem;

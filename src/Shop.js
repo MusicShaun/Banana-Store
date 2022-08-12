@@ -21,10 +21,9 @@ export default function Shop(props) {
 }
 
 const Wrapper = styled.div`
-  max-width: 80vw;
-  margin: auto; 
+  width: 80vw;
   margin-top: 2rem;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 `;
