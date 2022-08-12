@@ -23,7 +23,7 @@ export default function Checkout(props) {
         />
         <ProductInfo>
           <ProductTitle>Bananas</ProductTitle>
-          <ProductPrice>Total <span></span>${totalPrice}</ProductPrice>
+          <ProductPrice>Total <span> </span> ${totalPrice.toFixed(2)}</ProductPrice>
         </ProductInfo>
         <div>
           <Elements 
