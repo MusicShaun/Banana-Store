@@ -49,6 +49,8 @@ export default function About() {
     right: 0;
     top: 0;
     bottom: 0;
+    height: 100%;
+    width: 100%;
     opacity: 0.8;
     object-fit: fill;
     background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');

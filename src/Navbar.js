@@ -23,6 +23,7 @@ export default function Navbar(props) {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   list-style: none;
   overflow: hidden;
   height: 100px;
@@ -101,6 +102,7 @@ const NavBar = styled.nav`
   left: 0;
   right: 0;
   height: 100px; 
+  margin: 0;
   display: flex; 
   align-items: center;
   z-index: 2;
