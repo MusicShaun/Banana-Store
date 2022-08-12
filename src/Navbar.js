@@ -18,6 +18,8 @@ export default function Navbar(props) {
   }
 
   const UList = styled.ul`
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: calc(5% - 1rem);
   display: flex;
@@ -88,19 +90,13 @@ export default function Navbar(props) {
     </UList>
   </NavBar> 
 
-    <AdjustBodySizeFromNav/>
   </>)
 }
-const AdjustBodySizeFromNav = styled.div`
-  position: relative;
-  height: 100px;
-  width: 100%;
-`;
+
 const NavBar = styled.nav`
-  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 100px; 
   margin: 0;
   display: flex; 

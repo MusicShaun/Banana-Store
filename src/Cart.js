@@ -19,7 +19,7 @@ let totalPrice = 0;
   }) 
 
   return (<>
-    <BananaBackground>
+    <BananaBackground />
     <Wrapper>
     <H1> Your Cart</H1>
     <Container>
@@ -102,15 +102,15 @@ let totalPrice = 0;
     />
     </Container> 
     </Wrapper>
-    </BananaBackground>
   </>)
 }
 
 const BananaBackground = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     object-fit: fill;
     background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
     background-repeat: repeat;
@@ -124,6 +124,11 @@ const H1 = styled.h1`
   padding-top: 1rem;
   color: rgb(64,64,20);
   margin: 0 auto;
+
+  @media screen and (max-width: 700px) {
+    font-size: 2.5rem;
+    padding: 1rem;
+  } 
 `;
 const Wrapper = styled.div`
   margin: 132px auto;
@@ -140,7 +145,7 @@ const Container = styled.div`
   position: relative;
   width: 90%;
   height: 94%;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 2rem;
   border-radius: 12px;
   background-color: white;
@@ -158,6 +163,11 @@ const TableHead = styled.thead`
 `;
 const TableHeader = styled.th`
   font-weight: 600;
+
+  @media screen and (max-width: 700px) {
+    text-align: left;
+    padding-left: 1rem;
+  }
 `;
 const TableRow = styled.tr`
   height: 50px;
@@ -169,6 +179,10 @@ const TableData = styled.td`
   text-align: center;
   font-size: 1.2rem;
   white-space: nowrap;
+  @media screen and (max-width: 700px) {
+    text-align: left;
+    padding-left: 1rem;
+  }
 `;
 const TableFooter = styled.thead`
   height: 80px;

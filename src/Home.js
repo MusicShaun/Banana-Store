@@ -10,7 +10,9 @@ export default function Home() {
   }, [])
 
   return (<>   
-  <BananaBackground>
+  <BananaBackground />
+
+    <Container>
     <Wrapper>
     
       <Left>
@@ -28,28 +30,33 @@ export default function Home() {
 
   
     </Wrapper>
-</BananaBackground>
+    </Container>
   </>
 
   )
 }
 const BananaBackground = styled.div`
-  left: 0;
-  top: 0;
-  padding: 2rem 0;
+  position: fixed;
+  height: 100%;
   width: 100%;
-  min-height: calc(100vh - 170px);
   margin: 0;
   opacity: 0.8;
   object-fit: fill;
   background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
   background-repeat: repeat;
 `;
+const Container = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Wrapper = styled.div`
   width: 66vw; 
   height: 60vh;
-  margin: 0 auto;
-  transform: translateY(25%);
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;

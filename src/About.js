@@ -8,9 +8,11 @@ export default function About() {
   }, [])
 
   return (<>   
-    <BananaBackground>
+
+    <Container>
+    <BananaBackground />
       <Wrapper>
-      
+
         <Left>
           <H1>About Us</H1>
           <P>Back in 2006 we began peeling back the secrets of the banana.
@@ -36,32 +38,53 @@ export default function About() {
           <Img src='https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/01/595426939-1024x683.jpg' />
         </Right>
   
-    
+        
       </Wrapper>
-    </BananaBackground>
+</Container>
     </>
   
     )
   }
-  const BananaBackground = styled.div`
+  const Container = styled.main`
     position: absolute;
     width: 100%;
+    height: 100%;
+    left: 0;
+    top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  `;
+  const BananaBackground = styled.div`
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
     opacity: 0.8;
-    object-fit: fill;
     background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
     background-repeat: repeat;
     z-index: -1;
   `;
   const Wrapper = styled.div`
-    width: 86vw; 
-    margin: auto;
-    transform: translateY(15%);
+    width: 86%; 
+    height: 70%;
+    margin-top: 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    background: rgb(249, 222, 86);
-    
+    border-radius: 50px;
+    background: white;
+    border: 32px solid rgb(249, 222, 86);
+    box-sizing: border-box;
+
+    & > div {
+      flex-direction: column;
+      align-items: center;
+      /* background-color: white; */
+      padding: 0rem;
+    }
     @media screen and (max-width: 1000px) {
       height: max-content;
     }
@@ -72,28 +95,19 @@ export default function About() {
   `;
   const Left = styled.div`
     width: 50%;
-    height: 86%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    background-color: white;
-    padding: 1rem;
+    margin-right: 10%;
     border-radius:  20px 0 0 20px;
+    text-align: center;
+
     @media screen and (max-width: 1024px) {
-      margin: 2rem 0;
+      margin: 2rem 0 2rem 0 ;
       border-radius:  20px;
-      width: 86%;
+      width: 100%;
     }
   `;
   const Right = styled.div`
     width: 40%;
-    height: 86%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    padding: 1rem;
+    height: 400px;
     border-radius: 0 20px 20px 0;
     @media screen and (max-width: 1024px) {
       display: none;
@@ -108,6 +122,10 @@ export default function About() {
   const P = styled.p`
     font-size: 1rem;
     margin: 0.5rem 0.5rem 0.5rem 2rem;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0.5rem 0 0 0 ;
+    }
   `;
   const Img = styled.img`
     width: 90%;

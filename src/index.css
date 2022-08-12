@@ -1,14 +1,17 @@
+html {
+  height: 100%;
+}
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html, body, #app, #app>div {
-  height: 100%
+body {
+  min-height: 100vh;
 }
 /* #root {
   height: 100%;

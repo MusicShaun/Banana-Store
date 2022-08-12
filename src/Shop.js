@@ -9,8 +9,9 @@ export default function Shop(props) {
     document.title = `Shop`;
   }, [])
 
-  return (
-    <GreyBack>
+  return (<>
+    <GreyBack />
+    <Container>
     <Wrapper>
       <Products 
         cart={cart}
@@ -18,20 +19,28 @@ export default function Shop(props) {
         onProductTake={onProductTake}
       />
     </Wrapper>
-    </GreyBack>
-  )
+    </Container>
+    </>)
 }
 const GreyBack = styled.div`
+  position: fixed;
+  height: 100%;
   width: 100%;
   z-index: 0;
   background-color: hsl(56, 70%, 96%);
-  overflow: hidden;
+`;
+const Container = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Wrapper = styled.div`
-  position: relative;
   width: 80vw;
-  top: 2rem;
-  margin: 0 auto 4rem ;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
 `;
