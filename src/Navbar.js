@@ -94,6 +94,7 @@ export default function Navbar(props) {
 }
 
 const NavBar = styled.nav`
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -150,16 +151,9 @@ const ListItem = styled.li`
     border-radius: 20px;
     cursor: pointer;
   }
-  &:active:not(:last-child) {
-  box-shadow: inset 3px 3px 3px #666;
-  }
 
   @media screen and (max-width: 700px) {
     font-size: 3rem;
-
-    &:active {
-      box-shadow: none;
-  }
     &:hover {
       padding: 0rem;  
     }
@@ -180,9 +174,6 @@ const CartItem = styled.span`
     padding:  1rem 0rem;
     border-radius: 20px;
     cursor: pointer;
-  }
-  &:active {
-  box-shadow: inset 3px 3px 3px #666;
   }
 
   @media screen and (max-width: 700px) {

@@ -46,20 +46,19 @@ export default function About() {
     )
   }
   const Container = styled.main`
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:100px;
     left: 0;
-    top: 100px;
     display: flex;
     justify-content: center;
   `;
   const BananaBackground = styled.div`
     position: fixed;
-    width: 100%;
     height: 100%;
-    display: flex;
-    flex: 1;
+    width: 100%;
+    margin: 0;
     opacity: 0.8;
     background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
     background-repeat: repeat;
@@ -70,6 +69,7 @@ export default function About() {
     width: 86%; 
     height: 70%;
     padding: 2rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
