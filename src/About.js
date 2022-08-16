@@ -47,15 +47,17 @@ export default function About() {
   }
   const Container = styled.main`
   position: absolute;
-  height: 100%;
+  height: calc(100% - 100px);
   width: 100%;
   top:100px;
     left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
   `;
   const BananaBackground = styled.div`
     position: fixed;
+    top: 0;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -65,11 +67,11 @@ export default function About() {
     z-index: -1;
   `;
   const Wrapper = styled.div`
+    position: relative;
     display: flex;
     width: 86%; 
-    height: 70%;
-    padding: 2rem;
-    margin-top: 2rem;
+    height: 80%;
+    padding: 0 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,15 +87,16 @@ export default function About() {
       padding: 0rem;
     }
     @media screen and (max-width: 1000px) {
-      height: max-content;
+      height: auto;
     }
     @media screen and (max-width: 600px) {
-      transform: translateY(0);
-      margin-top: 2rem;
+    top: 4rem;
     }
   `;
   const Left = styled.div`
+    position: relative;
     width: 50%;
+    height: 85%;
     margin-right: 10%;
     border-radius:  20px 0 0 20px;
     text-align: center;
@@ -107,7 +110,7 @@ export default function About() {
   `;
   const Right = styled.div`
     width: 40%;
-    height: 400px;
+    height: 80%;
     border-radius: 0 20px 20px 0;
     @media screen and (max-width: 1024px) {
       display: none;

@@ -47,16 +47,17 @@ const BananaBackground = styled.div`
 `;
 const Container = styled.div`
   position: absolute;
-  height: 100%;
+  height: calc(100% - 100px);
   width: 100%;
-  top:100px;
+  top: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 const Wrapper = styled.div`
-  width: 66vw; 
-  height: 60vh;
-  margin-top: 2rem;
+  width: 66%; 
+  height: 80%;
+  /* margin-top: 2rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,9 +65,8 @@ const Wrapper = styled.div`
   background: rgb(249, 222, 86);
 
   @media screen and (max-width: 1024px) {
-    width: 76vw;
-    height: 72vh;
-    transform: translateY(0);
+    width: 76%;
+    height: 72%;
   }
 
 `;

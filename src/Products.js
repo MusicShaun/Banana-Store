@@ -51,12 +51,10 @@ return (<>
 }
 
 const ProductContainer = styled.div`
-  width: 250px;
-  min-width: 250px;
-  height: 500px;
+  height: 450px;
   display: flex;
   flex-direction: column;
-  flex: 1 2;
+  flex: 0.1 0 240px;
   margin: 1rem;
   padding: 0rem 1rem;
   border-radius: 20px;
@@ -67,7 +65,7 @@ const ProductContainer = styled.div`
 `;
 const ProductDetails = styled.div`
   width: 40%;
-  padding: 1rem;
+  padding: 0.2rem;
 `;
 const imageStyling = {
   width: '100%',

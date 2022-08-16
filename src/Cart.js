@@ -106,15 +106,15 @@ let totalPrice = 0;
 }
 
 const BananaBackground = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
-    background-repeat: repeat;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
+  background-repeat: repeat;
+  z-index: -1;
 `;
 const H1 = styled.h1`
   text-align: center;
@@ -125,8 +125,11 @@ const H1 = styled.h1`
   color: rgb(64,64,20);
   margin: 0 auto;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1000px) {
     font-size: 2.5rem;
+  } 
+  @media screen and (max-width: 700px) {
+    font-size: 2rem;
     padding: 1rem;
   } 
 `;

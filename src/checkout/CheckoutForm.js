@@ -59,6 +59,7 @@ const PayButton = styled.button`
   margin-top: 4vh;
   width: 100%;
   border: none;
+  z-index: 3;
   background: linear-gradient(
     135deg,
     rgb(49, 0, 62) 0%,
