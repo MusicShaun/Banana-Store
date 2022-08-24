@@ -6,9 +6,11 @@ import styled from 'styled-components';
 
 const CARD_ELEMENT_OPTIONS = {
   style: {
+
     base: {
       color: "#303238",
-      fontSize: "16px",
+      fontSize: "24px",
+
       fontFamily: "sans-serif",
       fontSmoothing: "antialiased",
       "::placeholder": {
@@ -26,7 +28,7 @@ const CARD_ELEMENT_OPTIONS = {
 
 function CardSection() {
   return (
-    <label >
+    <label>
       Card details
       <Details></Details>
       <CardElement options={CARD_ELEMENT_OPTIONS} />

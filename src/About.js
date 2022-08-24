@@ -45,100 +45,105 @@ export default function About() {
   
     )
   }
+  const BananaBackground = styled.div`
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 0.8;
+  background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
+  background-repeat: repeat;
+  z-index: -1;
+`;
   const Container = styled.main`
   position: absolute;
-  height: calc(100% - 100px);
+  min-height: 100%;
   width: 100%;
-  top:100px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   `;
-  const BananaBackground = styled.div`
-    position: fixed;
-    top: 0;
-    height: 100%;
+
+const Wrapper = styled.div`
+  position: relative;
+  top: 50px;
+  width: 86%; 
+  min-height: 80vh;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  background: white;
+  border: 32px solid rgb(249, 222, 86);
+  box-sizing: border-box;
+
+  & > div {
+    flex-direction: column;
+    align-items: center;
+    /* background-color: white; */
+    padding: 0rem;
+  }
+  &:nth-child(2) {
+    align-items: center; 
+  }
+  @media screen and (max-width: 1000px) {
+    height: auto;
+  }
+  @media screen and (max-width: 600px) {
+  top: 110px;
+  }
+`;
+const Left = styled.div`
+  position: relative;
+  width: 50%;
+  height: 85%;
+  margin-right: 10%;
+  border-radius:  20px 0 0 20px;
+  text-align: center;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    margin: 2rem 0 2rem 0 ;
+    padding: 0;
+    border-radius:  20px;
     width: 100%;
-    margin: 0;
-    opacity: 0.8;
-    background-image: url('https://i.pinimg.com/236x/6c/68/20/6c68206ddec35d8fc8b7df0672f92804--banana-fruit-food-patterns.jpg');
-    background-repeat: repeat;
-    z-index: -1;
-  `;
-  const Wrapper = styled.div`
-    position: relative;
-    display: flex;
-    width: 86%; 
-    height: 80%;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    background: white;
-    border: 32px solid rgb(249, 222, 86);
-    box-sizing: border-box;
+  }
+`;
+const Right = styled.div`
+  width: 40%;
+  height: 80%;
+  border-radius: 0 20px 20px 0;
+  max-width: 400px;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+const H1 = styled.h1`
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-size: 3rem;
+  border-bottom: 2px solid rgb(249, 222, 86);
+  white-space: nowrap;
+`;
+const P = styled.p`
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 2rem;
 
-    & > div {
-      flex-direction: column;
-      align-items: center;
-      /* background-color: white; */
-      padding: 0rem;
-    }
-    @media screen and (max-width: 1000px) {
-      height: auto;
-    }
-    @media screen and (max-width: 600px) {
-    top: 4rem;
-    }
-  `;
-  const Left = styled.div`
-    position: relative;
-    width: 50%;
-    height: 85%;
-    margin-right: 10%;
-    border-radius:  20px 0 0 20px;
-    text-align: center;
-
-    @media screen and (max-width: 1024px) {
-      margin: 2rem 0 2rem 0 ;
-      padding: 0;
-      border-radius:  20px;
-      width: 100%;
-    }
-  `;
-  const Right = styled.div`
-    width: 40%;
-    height: 80%;
-    border-radius: 0 20px 20px 0;
-    @media screen and (max-width: 1024px) {
-      display: none;
-    }
-  `;
-  const H1 = styled.h1`
-    margin: 0 0 0.5rem;
-    font-weight: 600;
-    font-size: 3rem;
-    border-bottom: 2px solid rgb(249, 222, 86);
-    white-space: nowrap;
-  `;
-  const P = styled.p`
-    font-size: 1rem;
-    margin: 0.5rem 0.5rem 0.5rem 2rem;
-
-    @media screen and (max-width: 1024px) {
-      margin: 0.5rem 0 0 0 ;
-    }
-  `;
-  const Img = styled.img`
-    width: 90%;
-    height: 50%;
-    filter: brightness(1.2);
-    &:first-child {
-      border-radius: 20px 20px 0 0 ;
-    }
-    &:last-child {
-      border-radius: 0 0 20px 20px;
-    }
-  `;
+  @media screen and (max-width: 1024px) {
+    margin: 0.5rem 0 0 0 ;
+  }
+`;
+const Img = styled.img`
+  width: 90%;
+  height: 50%;
+  filter: brightness(1.2);
+  &:first-child {
+    border-radius: 20px 20px 0 0 ;
+  }
+  &:last-child {
+    border-radius: 0 0 20px 20px;
+  }
+`;

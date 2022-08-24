@@ -25,8 +25,8 @@ export default function Checkout(props) {
           <ProductTitle>Bananas</ProductTitle>
           <ProductPrice>Total <span> </span> ${totalPrice.toFixed(2)}</ProductPrice>
         </ProductInfo>
-        <div>
-          <Elements 
+        <div style={{padding: '0 1rem'}}>
+          <Elements
               stripe={stripePromise} 
               hidePostalCode={true}
               >
@@ -41,18 +41,22 @@ export default function Checkout(props) {
 const Wrapper = styled.div`
 position: absolute;
   z-index: 1;
-  height: 90vh;
-  width: 100vw;
+  height: 90%;
+  width: 100%;
+  top: 10%;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 const Product = styled.div`
+  position: relative;
   width: 100%;
   max-width: 450px;
   margin: auto;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   overflow: hidden;
+  background-color: white;
 `;
 const Image = styled.div`
   display: flex;
