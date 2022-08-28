@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import { useEffect } from 'react';
-
+import {devices} from './devices';
 
 export default function Home() {
 
@@ -69,6 +69,7 @@ const Wrapper = styled.div`
     height: 72%;
   }
 
+
 `;
 const Left = styled.div`
   width: 60%;
@@ -99,13 +100,17 @@ const H1 = styled.h1`
   font-size: 3rem;
   box-shadow: 0 3px 15px hsla(0, 0%, 100%, 0.22);
 
-  @media screen and (max-width: 600px) {
-    font-size: 2rem;
+  ${devices.mobile} {
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
 `;
 const P = styled.p`
   margin: 0.2rem;
   font-size: 1.2rem;
+  ${devices.mobile}{
+    font-size: 1rem;
+  }
 `;
 const H2Button = styled.h2`
   margin-top: 4rem;
@@ -121,8 +126,9 @@ const H2Button = styled.h2`
   background-color: #19a596;
   box-shadow: inset 5px 5px 5px #666;
   }
-  @media screen and (max-width: 500px) {
+  ${devices.mobile} {
     width: 200px;
+    margin-top: 1rem;
   }
 `;
 const removeShit = {
