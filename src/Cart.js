@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import GoToCheckout from './GoToCheckout';
 import { useEffect } from 'react'; 
 import { useMediaQuery } from 'react-responsive'
+import {devices} from './devices';
 
 
 export default function Cart(props) {
@@ -163,6 +164,9 @@ const TableHead = styled.thead`
   height: 50px;
   font-size: 1.5rem;
   background-color: aquamarine;
+  ${devices.mobile}{
+    font-size: 1.2rem;
+  }
 `;
 const TableHeader = styled.th`
   font-weight: 600;
@@ -186,10 +190,18 @@ const TableData = styled.td`
     text-align: left;
     padding-left: 1rem;
   }
+  ${devices.mobile}{
+    font-size: 0.9rem;
+  }
 `;
 const TableFooter = styled.thead`
   height: 80px;
   font-size: 1.5rem;
   background-color: aquamarine;
+  ${devices.mobile}{
+    font-size: 1.1rem;
+  }
+
 `;
+
 
