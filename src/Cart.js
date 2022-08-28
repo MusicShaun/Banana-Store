@@ -136,7 +136,7 @@ const H1 = styled.h1`
 `;
 const Wrapper = styled.div`
   margin: 132px auto;
-  width: 90vw;
+  width: 96vw;
   min-height: 70vh;
   display: flex;
   justify-content: flex-start;
@@ -147,7 +147,7 @@ const Wrapper = styled.div`
 `;
 const Container = styled.div`
   position: relative;
-  width: 90%;
+  width: 96%;
   height: 94%;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -199,7 +199,7 @@ const TableFooter = styled.thead`
   font-size: 1.5rem;
   background-color: aquamarine;
   ${devices.mobile}{
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
 `;
